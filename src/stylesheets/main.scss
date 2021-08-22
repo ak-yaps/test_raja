@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+/*base*/
+@import '../stylesheets/base/base.scss';
+@import '../stylesheets/base/fonts.scss';
+
+/*vendors*/
+@import '../stylesheets/vendor/normalize.scss';
+
+/*helpers*/
+@import '../stylesheets/helpers/variables.scss';
+@import '../stylesheets/helpers/mixins.scss';
+
+/*componenents*/
+@import '../stylesheets/components/buttons.scss';
+
+body {
+  background-color: $red;
+  font-family: $body-font;
+  color: $white;
+  text-align: center;
+
+  @include md {
+    background-color: $blue;
+  }
+
+  @include lg {
+    background-color: $yellow;
+  }
+}
+
+.header {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+
+  &__nav {
+    background-color: $black;
+    height: 100vh;
+    padding-top: 2vh;
+
+    @include md {
+      background-color: transparent;
+      height: auto;
+    }
+  }
+
+  &__nav__menu__item {
+    font-size: 2em;
+    padding: 10px 0;
+    text-transform: uppercase;
+
+    @include md {
+      display: inline-block;
+      font-size: initial;
+      color: initial;
+    }
+
+
+    &__link {
+      padding: 0 10px;
+    }
+  }
+}
+
+.main {
+  background-image: url("../assets/img/forest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 0 5vw 5vh 5vw;
+  ;
+
+  @include md {
+    height: 100vh;
+  }
+
+  @include lg {
+    height: 100vh;
+  }
+}
+
+.presentation {
+  height: 25vh;
+  display: grid;
+  padding: 0 5vw 5vh 0;
+
+  @include md {
+    height: 50vh;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__img {
+    background-color: cadetblue;
+    display: none;
+
+    @include md {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+
+  &__article {
+    width: 100%;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    padding-left: 2vw;
+  }
+}
+
+.works {
+  height: auto;
+  display: grid;
+  align-content: space-between;
+  justify-content: center;
+
+  .btn {
+    margin-bottom: 5vh;
+  }
+}
+
+.services {
+  height: auto;
+  display: grid;
+
+
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 150px;
+
+      &__title {
+        color: $white;
+        text-transform: uppercase;
+
+
+      }
+    }
+  }
+}
+
+.aboutus {
+  height: auto;
+  padding: 0 5vw 5vh 5vw;
+  display: grid;
+
+  &__article {
+    padding-bottom: 5vh;
+  }
+
+  &__card {
+    display: grid;
+    width: 250px;
+    height: 250px;
+    border: solid black 1px;
+
+    &__img {
+      border-bottom: solid black 1px;
+    }
+  }
+
+  &__card__wrapper {
+    display: grid;
+    justify-items: center;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.testimonials {
+  height: auto;
+  padding: 0 5vw 5vh 5vw;
+  display: grid;
+}
+
+.subscribe {
+  padding: 0 5vw 5vh 5vw;
+  display: grid;
+  justify-content: center;
+  background-color: #2B63C2;
+
+  &__submit {
+    padding: 5px 10px;
+    border-width: 1px;
+    border-color: #ffffff;
+    background-color: transparent;
+    border-style: solid;
+    border-radius: 0px;
+    color: $white;
+  }
+}
+
+.footer {
+  background-color: rgb(46, 43, 43);
+  display: grid;
+  padding: 2vh;
+
+
+  &__menu__items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &__address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1vh;
+  }
+}
+
+#hiddenMenu {
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
+.header__menu__icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  @include md {
+    display: none;
+  }
+}
