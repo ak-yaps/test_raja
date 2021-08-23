@@ -35,9 +35,11 @@
   &:hover {
     background: darken($color, 5%);
     transition: all 0.3s ease;
+    color: lighten($color, 100%);
   }
 
   &:active {
     background: darken($color, 25%);
+    color: lighten($color, 100%);
   }
 }

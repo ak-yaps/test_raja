@@ -6,7 +6,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="<%= htmlWebpackPlugin.options.metaDesc %>" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/7d28104acb.js" crossorigin="anonymous"></script>
 </head>
 
@@ -15,12 +14,13 @@
     <h2 class="header__title">.ONETOWN</h2>
     <nav class="header__nav" id="hiddenMenu">
       <ul class="header__nav__menu">
-        <li class="header__nav__menu__item"><a href="" class="header__nav__menu__item__link">about us</a></li>
-        <li class="header__nav__menu__item"><a href="" class="header__nav__menu__item__link">work</a></li>
-        <li class="header__nav__menu__item"><a href="" class="header__nav__menu__item__link">services</a></li>
-        <li class="header__nav__menu__item"><a href="" class="header__nav__menu__item__link">blog</a></li>
-        <li class="header__nav__menu__item"><a href="" class="header__nav__menu__item__link">careers</a></li>
-        <li class="header__nav__menu__item"><a href="" class="header__nav__menu__item__link">contact</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">about us</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">work</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">services</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">blog</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">careers</a></li>
+        <li class="header__nav__menu__item"><a href="./pages/testjs.html"
+            class="header__nav__menu__item__link">contact</a></li>
       </ul>
     </nav>
     <a href="javascript:void(0);" class="icon header__menu__icon" onclick="hiddenMenu()"><i
@@ -32,14 +32,14 @@
         voluptas, porro iusto, facilis nisi ab deserunt eligendi ratione repudiandae soluta adipisci? Architecto
         assumenda id consectetur ipsum natus!
       </article>
-      <button class="btn btn--white">SHOW MORE</button>
+      <button class="btn btn--black">SHOW MORE</button>
     </article>
     <article class="presentation">
       <img class="presentation__img" src="./assets/img/forest.jpg" alt="forest" />
       <div class="presentation__article">
         <div class="presentation__article__txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quae
           reprehenderit veniam voluptatum nobis nihil labore rem tenetur atque inventore.</div>
-        <button class="btn btn--white">SHOW MORE</button>
+        <button class="btn btn--black">SHOW MORE</button>
       </div>
     </article>
     <article class="works">
@@ -71,7 +71,7 @@
         </div>
         <div class="services__block__item">
           <div class="services__block__item__title">motion dynamics</div>
-          <div class="services__block__item__icon">i<i class="fas fa-photo-video"></i></div>
+          <div class="services__block__item__icon"><i class="fas fa-photo-video"></i></div>
         </div>
       </div>
     </article>
@@ -83,7 +83,7 @@
       <div class="aboutus__card__wrapper">
         <article class="aboutus__card">
           <img class="aboutus__card__img" src="./assets/img/aboutus_1.jpg" alt="a work meeting">
-          <div class="aboutus__card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <div class="aboutus__card__content">jane doe
             <div class="aboutus__card__content__sns">
               <i class="fab fa-skype"></i>
               <i class="fab fa-dribbble"></i>
@@ -94,7 +94,7 @@
         </article>
         <article class="aboutus__card">
           <img class="aboutus__card__img" src="./assets/img/aboutus_1.jpg" alt="a work meeting">
-          <div class="aboutus__card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <div class="aboutus__card__content">john doe
             <div class="aboutus__card__content__sns">
               <i class="fab fa-skype"></i>
               <i class="fab fa-dribbble"></i>
@@ -105,7 +105,7 @@
         </article>
         <article class="aboutus__card">
           <img class="aboutus__card__img" src="./assets/img/aboutus_1.jpg" alt="a work meeting">
-          <div class="aboutus__card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          <div class="aboutus__card__content">mary doe
             <div class="aboutus__card__content__sns">
               <i class="fab fa-skype"></i>
               <i class="fab fa-dribbble"></i>
@@ -121,8 +121,10 @@
       <article class="testimonials__article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque labore
         eius eos iusto, commodi non, iure ex esse pariatur iste rem alias. Voluptates consequatur aperiam illo sapiente
         amet dicta itaque porro non asperiores debitis alias voluptas odio est natus facere sit ipsam, laborum ipsum
-        reiciendis maxime magnam! Provident, commodi iure?</article>
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+        reiciendis maxime magnam! Provident, commodi iure?
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+      </article>
+
     </article>
     <article class="subscribe">
       <h2 class="subscribe__title">subscribe to our newsletter</h2>
@@ -138,38 +140,22 @@
       </div>
     </article>
   </main>
-  <div class="exo">
-    <label for="nb-select">Pick a number:</label>
-    <select name="nb" id="nb-select">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="TEST">TEST</option>
-    </select>
-    <div id="showExo">
-
-    </div>
+  </div>
   </div>
   <footer class="footer">
     <nav class="footer__menu">
       <ul class="footer__menu__items">
-        <li class="footer__menu__item"><a href="" class="footer__menu__item__link">about us</a></li>
-        <li class="footer__menu__item"><a href="" class="footer__menu__item__link">work</a></li>
-        <li class="footer__menu__item"><a href="" class="footer__menu__item__link">services</a></li>
-        <li class="footer__menu__item"><a href="" class="footer__menu__item__link">blog</a></li>
-        <li class="footer__menu__item"><a href="" class="footer__menu__item__link">careers</a></li>
-        <li class="footer__menu__item"><a href="" class="footer__menu__item__link">contact</a></li>
+        <li class="footer__menu__item"><a href="#" class="footer__menu__item__link">about us</a></li>
+        <li class="footer__menu__item"><a href="#" class="footer__menu__item__link">work</a></li>
+        <li class="footer__menu__item"><a href="#" class="footer__menu__item__link">services</a></li>
+        <li class="footer__menu__item"><a href="#" class="footer__menu__item__link">blog</a></li>
+        <li class="footer__menu__item"><a href="#" class="footer__menu__item__link">careers</a></li>
+        <li class="footer__menu__item"><a href="#" class="footer__menu__item__link">contact</a></li>
       </ul>
     </nav>
     <address class="footer__address">
-      <a href="" class="footer__address__link">EMAIL: info@domain.com</a>
-      <a href="" class="footer__address__link">ST.LOUIS: (123) 456 7890</a>
+      <a href="#" class="footer__address__link">EMAIL: info@domain.com</a>
+      <a href="#" class="footer__address__link">ST.LOUIS: (123) 456 7890</a>
     </address>
   </footer>
   <script>

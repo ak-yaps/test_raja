@@ -15,17 +15,17 @@
 @import '../stylesheets/components/buttons.scss';
 
 body {
-  background-color: $red;
+  /*background-color: $red;*/
   font-family: $body-font;
-  color: $white;
+  color: $black;
   text-align: center;
 
   @include md {
-    background-color: $blue;
+    /*background-color: $blue;*/
   }
 
   @include lg {
-    background-color: $yellow;
+    /*background-color: $yellow;*/
   }
 }
 
@@ -42,10 +42,12 @@ body {
     background-color: $black;
     height: 100vh;
     padding-top: 2vh;
+    
 
     @include md {
       background-color: transparent;
       height: auto;
+      display: grid;
     }
   }
 
@@ -60,15 +62,19 @@ body {
       color: initial;
     }
 
-
     &__link {
       padding: 0 10px;
+      color: $white;
+
+      @include md {
+        color: initial;
+      }
     }
   }
 }
 
 .main {
-  background-image: url("../assets/img/forest.jpg");
+  background-image: url("../assets/img/works_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 50vh;
@@ -76,46 +82,48 @@ body {
   align-content: center;
   justify-items: center;
   padding: 0 5vw 5vh 5vw;
-  ;
 
   @include md {
     height: 100vh;
   }
 
-  @include lg {
-    height: 100vh;
+  &__txt {
+    width: 70%;
   }
+
 }
 
 .presentation {
-  height: 25vh;
+  min-height: 25vh;
   display: grid;
-  padding: 0 5vw 5vh 0;
+  justify-items: center;
 
   @include md {
-    height: 50vh;
+    height: auto;
     grid-template-columns: 1fr 1fr;
   }
 
   &__img {
-    background-color: cadetblue;
     display: none;
 
     @include md {
       display: block;
       width: 100%;
-      height: 100%;
       object-fit: cover;
       overflow: hidden;
     }
   }
 
   &__article {
-    width: 100%;
+    width: 80%;
     display: grid;
     align-content: center;
     justify-items: center;
-    padding-left: 2vw;
+
+    @include md {
+      width: auto;
+      padding: 0 2vw;
+    }
   }
 }
 
@@ -124,6 +132,18 @@ body {
   display: grid;
   align-content: space-between;
   justify-content: center;
+  background-image: url(../assets/img/works_1.jpg);
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+
+  @include md {
+    min-height: 60vh;
+  }
+
+  &__title {
+    color: $black;
+  }
 
   .btn {
     margin-bottom: 5vh;
@@ -133,7 +153,6 @@ body {
 .services {
   height: auto;
   display: grid;
-
 
   &__block {
     display: grid;
@@ -146,12 +165,67 @@ body {
     &__item {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 150px;
+      height: 200px;
+
+      &:nth-child(1)>.services__block__item__title {
+        background-color: #02e8ba;
+      }
+
+      &:nth-child(2)>.services__block__item__title {
+        background-color: #DF4344;
+      }
+
+      &:nth-child(3)>.services__block__item__title {
+        background-color: #65B343;
+      }
+
+      &:nth-child(4)>.services__block__item__title {
+        background-color: #884AB7;
+      }
+
+      &:nth-child(5)>.services__block__item__title {
+        background-color: #FFA200;
+      }
+
+      &:nth-child(6)>.services__block__item__title {
+        background-color: #3084E6;
+      }
+
+      &:nth-child(1)>.services__block__item__icon {
+        color: #02e8ba;
+      }
+
+      &:nth-child(2)>.services__block__item__icon {
+        color: #DF4344;
+      }
+
+      &:nth-child(3)>.services__block__item__icon {
+        color: #65B343;
+      }
+
+      &:nth-child(4)>.services__block__item__icon {
+        color: #884AB7;
+      }
+
+      &:nth-child(5)>.services__block__item__icon {
+        color: #FFA200;
+      }
+
+      &:nth-child(6)>.services__block__item__icon {
+        color: #3084E6;
+      }
 
       &__title {
         color: $white;
         text-transform: uppercase;
+        display: grid;
+        align-content: center;
+      }
 
+      &__icon {
+        font-size: 5em;
+        display: grid;
+        align-content: center;
 
       }
     }
@@ -162,19 +236,52 @@ body {
   height: auto;
   padding: 0 5vw 5vh 5vw;
   display: grid;
+  justify-items: center;
+  background-color: rgb(238, 238, 238);
+
+  @include md {
+    background-image: url(../assets/img/aboutus_2.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 0 0 5vh 0;
+    color: $white;
+  }
 
   &__article {
     padding-bottom: 5vh;
+    max-width: 70%;
   }
 
   &__card {
     display: grid;
     width: 250px;
     height: 250px;
-    border: solid black 1px;
+    border: solid grey 1px;
+    color: $black;
+
+    @include md {
+      border-color: white;
+      color: inherit;
+    }
+
+    &:nth-child(2) {
+      margin: 5vh 0;
+
+      @include md {
+        margin: 0 2vw;
+      }
+    }
 
     &__img {
       border-bottom: solid black 1px;
+    }
+
+    &__content {
+      text-transform: uppercase;
+
+      &__sns {
+        padding-top: 2vh;
+      }
     }
   }
 
@@ -189,9 +296,20 @@ body {
 }
 
 .testimonials {
-  height: auto;
+  height: 40vh;
   padding: 0 5vw 5vh 5vw;
   display: grid;
+  justify-content: center;
+
+  &__article {
+    width: 60vw;
+    justify-content: center;
+
+    &>div {
+      padding-top: 5vh;
+      font-weight: 500;
+    }
+  }
 }
 
 .subscribe {
@@ -199,6 +317,7 @@ body {
   display: grid;
   justify-content: center;
   background-color: #2B63C2;
+  color: $white;
 
   &__submit {
     padding: 5px 10px;
@@ -214,8 +333,7 @@ body {
 .footer {
   background-color: rgb(46, 43, 43);
   display: grid;
-  padding: 2vh;
-
+  padding: 3vh;
 
   &__menu__items {
     display: grid;
@@ -233,7 +351,7 @@ body {
   display: none;
 
   @include md {
-    display: block;
+    display: initial;
   }
 }
 

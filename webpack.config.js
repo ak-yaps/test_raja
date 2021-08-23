@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 const path = require('path');
 
 let config = {
@@ -37,16 +39,33 @@ let config = {
       {
         test: /\.html$/i,
         loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              '...',
+              {
+                tag: 'a',
+                attribute: 'href',
+                type: 'src',
+              }
+            ]
+          }
+        }
       }
     ]
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      hash: true,
       title: 'test RAJA',
       template: './src/index.html',
       filename: 'index.html',
+      inject: 'body'
+    }),
+    new HtmlWebpackPlugin({
+      title: 'test RAJA',
+      template: './src/pages/testjs.html',
+      filename: 'testjs.html',
       inject: 'body'
     })
   ],
