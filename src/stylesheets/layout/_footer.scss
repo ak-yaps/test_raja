@@ -1,0 +1,39 @@
+.footer {
+  background-color: rgb(46, 43, 43);
+  display: grid;
+  justify-content: center;
+  padding: 2vh;
+
+  @include md {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__menu {
+
+    display: grid;
+    align-content: center;
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__item {
+
+      &__link {
+        color: $white;
+      }
+    }
+
+  }
+
+  &__address {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1vh;
+
+    &__link {
+      color: $white;
+    }
+  }
+}

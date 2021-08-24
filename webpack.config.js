@@ -33,7 +33,7 @@ let config = {
         test: /\.(jpe?g|png|gif)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[hash][ext]'
+          filename: 'img/[name][ext]'
         }
       },
       {
@@ -57,15 +57,8 @@ let config = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'test RAJA',
       template: './src/index.html',
       filename: 'index.html',
-      inject: 'body'
-    }),
-    new HtmlWebpackPlugin({
-      title: 'test RAJA',
-      template: './src/pages/testjs.html',
-      filename: 'testjs.html',
       inject: 'body'
     })
   ],

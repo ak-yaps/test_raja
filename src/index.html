@@ -1,52 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-  <title><%= htmlWebpackPlugin.options.title %></title>
+  <title>Test de recrutement RAJA</title>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="<%= htmlWebpackPlugin.options.metaDesc %>" />
+  <meta name="viewport" content="width=368, initial-scale=1" />
+  <meta name="description" content="Ceci est un test technique de recrutement" />
+  <meta name=”robots” content="index, follow">
   <script src="https://kit.fontawesome.com/7d28104acb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header class="header">
-    <h2 class="header__title">.ONETOWN</h2>
-    <nav class="header__nav" id="hiddenMenu">
-      <ul class="header__nav__menu">
-        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">about us</a></li>
-        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">work</a></li>
-        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">services</a></li>
-        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">blog</a></li>
-        <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">careers</a></li>
-        <li class="header__nav__menu__item"><a href="./pages/testjs.html"
-            class="header__nav__menu__item__link">contact</a></li>
-      </ul>
-    </nav>
-    <a href="javascript:void(0);" class="icon header__menu__icon" onclick="hiddenMenu()"><i
-        class="fas fa-bars 2x"></i></a>
+    <h1 class="header__title">.ONETOWN</h2>
+      <nav class="header__nav" id="hiddenMenu">
+        <ul class="header__nav__menu">
+          <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">about us</a></li>
+          <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">work</a></li>
+          <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">services</a></li>
+          <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">blog</a></li>
+          <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">careers</a></li>
+          <li class="header__nav__menu__item"><a href="#" class="header__nav__menu__item__link">contact</a></li>
+        </ul>
+      </nav>
+      <i class="fas fa-bars icon header__nav__menu__icon" id="menu__bars" onclick="hideMenu()"></i>
+
   </header>
-  <main id="wrapper">
-    <article class="main">
-      <article class="main__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt, modi ea
+  <main id=" wrapper">
+    <section class="main">
+      <div class="main__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nesciunt, modi ea
         voluptas, porro iusto, facilis nisi ab deserunt eligendi ratione repudiandae soluta adipisci? Architecto
         assumenda id consectetur ipsum natus!
-      </article>
-      <button class="btn btn--black">SHOW MORE</button>
-    </article>
-    <article class="presentation">
-      <img class="presentation__img" src="./assets/img/forest.jpg" alt="forest" />
-      <div class="presentation__article">
-        <div class="presentation__article__txt">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quae
-          reprehenderit veniam voluptatum nobis nihil labore rem tenetur atque inventore.</div>
-        <button class="btn btn--black">SHOW MORE</button>
       </div>
-    </article>
+      <button class="btn btn--black">SHOW MORE</button>
+    </section>
+    <section class="presentation">
+      <img class="presentation__img" src="./assets/img/presentation_768.jpg"
+        srcset="./assets/img/presentation_2x.jpg 2x, ./assets/img/presentation_1280.jpg 1280w" sizes="50vw"
+        alt="a woman holding a smartphone in front of a laptop" />
+      <article class="presentation__article">
+        <h2 class="presentation__article__title">Lorem ipsum dolor sit amet consectetur.</h2>
+        <div class="presentation__article__txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui iste
+          obcaecati eos! Expedita animi, corrupti voluptatem. Laudantium quo sed iste?
+          Eveniet aspernatur molestiae corrupti quisquam. Accusantium veniam, nihil obcaecati provident saepe
+          reprehenderit distinctio, molestiae voluptate a sint veritatis.
+          Architecto dolores delectus voluptate impedit accusamus aliquam quibusdam assumenda soluta quisquam.</div>
+        <button class="btn btn--black">SHOW MORE</button>
+      </article>
+    </section>
     <article class="works">
       <h2 class="works__title">featured works</h2>
       <button class="btn btn--black">SHOW MORE</button>
     </article>
-    <article class="services">
+    <section class="services">
       <h2 class="services__title">our services</h2>
       <div class="services__block">
         <div class="services__block__item">
@@ -74,14 +80,15 @@
           <div class="services__block__item__icon"><i class="fas fa-photo-video"></i></div>
         </div>
       </div>
-    </article>
+    </section>
     <article class="aboutus">
       <h2 class="aboutus__title">about us</h2>
       <article class="aboutus__article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab accusantium nam
-        velit voluptate ea maiores quae deleniti a. Cupiditate pariatur sint, non odit distinctio illum quia inventore
+        velit voluptate ea maiores quae deleniti a. Cupiditate pariatur sint, non odit distinctio illum quia
+        inventore
         hic qui quo.</article>
       <div class="aboutus__card__wrapper">
-        <article class="aboutus__card">
+        <div class="aboutus__card">
           <img class="aboutus__card__img" src="./assets/img/aboutus_1.jpg" alt="a work meeting">
           <div class="aboutus__card__content">jane doe
             <div class="aboutus__card__content__sns">
@@ -91,10 +98,10 @@
               <i class="fab fa-google-plus-g"></i>
             </div>
           </div>
-        </article>
-        <article class="aboutus__card">
+        </div>
+        <div class="aboutus__card">
           <img class="aboutus__card__img" src="./assets/img/aboutus_1.jpg" alt="a work meeting">
-          <div class="aboutus__card__content">john doe
+          <div class="aboutus__card__content">jane doe
             <div class="aboutus__card__content__sns">
               <i class="fab fa-skype"></i>
               <i class="fab fa-dribbble"></i>
@@ -102,10 +109,10 @@
               <i class="fab fa-google-plus-g"></i>
             </div>
           </div>
-        </article>
-        <article class="aboutus__card">
+        </div>
+        <div class="aboutus__card">
           <img class="aboutus__card__img" src="./assets/img/aboutus_1.jpg" alt="a work meeting">
-          <div class="aboutus__card__content">mary doe
+          <div class="aboutus__card__content">jane doe
             <div class="aboutus__card__content__sns">
               <i class="fab fa-skype"></i>
               <i class="fab fa-dribbble"></i>
@@ -113,13 +120,14 @@
               <i class="fab fa-google-plus-g"></i>
             </div>
           </div>
-        </article>
+        </div>
       </div>
     </article>
     <article class="testimonials">
       <h2 class="testimonials__title">testimonials</h2>
       <article class="testimonials__article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque labore
-        eius eos iusto, commodi non, iure ex esse pariatur iste rem alias. Voluptates consequatur aperiam illo sapiente
+        eius eos iusto, commodi non, iure ex esse pariatur iste rem alias. Voluptates consequatur aperiam illo
+        sapiente
         amet dicta itaque porro non asperiores debitis alias voluptas odio est natus facere sit ipsam, laborum ipsum
         reiciendis maxime magnam! Provident, commodi iure?
         <div>Lorem ipsum dolor sit amet consectetur adipisicing.</div>
@@ -128,7 +136,7 @@
     </article>
     <article class="subscribe">
       <h2 class="subscribe__title">subscribe to our newsletter</h2>
-      <input type="email" name="" placeholder="Enter Your Email Address" id="" class="subscribe__input">
+      <input type="email" name="email" placeholder="Enter Your Email Address" id="input_email" class="subscribe__input">
       <button type="submit" class="subscribe__submit">SUBMIT</button>
       <h5 class="subscribe__txt">.ONETOWN</h5>
       <div class="subscribe__sns">
@@ -140,8 +148,6 @@
       </div>
     </article>
   </main>
-  </div>
-  </div>
   <footer class="footer">
     <nav class="footer__menu">
       <ul class="footer__menu__items">
@@ -159,14 +165,6 @@
     </address>
   </footer>
   <script>
-    function hiddenMenu() {
-      let x = document.getElementById("hiddenMenu");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
   </script>
 </body>
 

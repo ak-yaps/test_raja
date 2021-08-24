@@ -1,87 +1,40 @@
 @charset "UTF-8";
 
 /*base*/
-@import '../stylesheets/base/base.scss';
-@import '../stylesheets/base/fonts.scss';
+@import 'base/base';
+@import 'base/fonts';
 
 /*vendors*/
-@import '../stylesheets/vendor/normalize.scss';
+@import 'vendor/normalize';
 
 /*helpers*/
-@import '../stylesheets/helpers/variables.scss';
-@import '../stylesheets/helpers/mixins.scss';
+@import 'helpers/variables';
+@import 'helpers/mixins';
 
 /*componenents*/
-@import '../stylesheets/components/buttons.scss';
+@import 'components/buttons';
+
+/*layout*/
+@import 'layout/header';
+@import 'layout/footer';
+
 
 body {
-  /*background-color: $red;*/
   font-family: $body-font;
   color: $black;
   text-align: center;
-
-  @include md {
-    /*background-color: $blue;*/
-  }
-
-  @include lg {
-    /*background-color: $yellow;*/
-  }
-}
-
-.header {
-  background-color: transparent;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 50px;
-  width: 100%;
-  position: absolute;
-  z-index: 10;
-
-  &__nav {
-    background-color: $black;
-    height: 100vh;
-    padding-top: 2vh;
-    
-
-    @include md {
-      background-color: transparent;
-      height: auto;
-      display: grid;
-    }
-  }
-
-  &__nav__menu__item {
-    font-size: 2em;
-    padding: 10px 0;
-    text-transform: uppercase;
-
-    @include md {
-      display: inline-block;
-      font-size: initial;
-      color: initial;
-    }
-
-    &__link {
-      padding: 0 10px;
-      color: $white;
-
-      @include md {
-        color: initial;
-      }
-    }
-  }
 }
 
 .main {
-  background-image: url("../assets/img/works_1.jpg");
+  background-image: url("../assets/img/main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: right;
   height: 50vh;
   display: grid;
   align-content: center;
   justify-items: center;
-  padding: 0 5vw 5vh 5vw;
+  padding: 0 5vw;
 
   @include md {
     height: 100vh;
@@ -90,17 +43,18 @@ body {
   &__txt {
     width: 70%;
   }
-
 }
 
 .presentation {
   min-height: 25vh;
   display: grid;
   justify-items: center;
+  padding-bottom: 3vh;
 
   @include md {
-    height: auto;
+    min-height: 50vh;
     grid-template-columns: 1fr 1fr;
+    padding-bottom: 0;
   }
 
   &__img {
@@ -108,7 +62,8 @@ body {
 
     @include md {
       display: block;
-      width: 100%;
+      max-width: 100%;
+      min-height: 50vh;
       object-fit: cover;
       overflow: hidden;
     }
@@ -117,12 +72,17 @@ body {
   &__article {
     width: 80%;
     display: grid;
-    align-content: center;
+    align-content: space-around;
     justify-items: center;
 
     @include md {
       width: auto;
       padding: 0 2vw;
+    }
+
+    &__txt {
+      font-weight: lighter;
+      line-height: 1.52;
     }
   }
 }
@@ -133,7 +93,6 @@ body {
   align-content: space-between;
   justify-content: center;
   background-image: url(../assets/img/works_1.jpg);
-  overflow: hidden;
   background-position: center;
   background-size: cover;
 
@@ -165,7 +124,8 @@ body {
     &__item {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 200px;
+      min-height: 200px;
+      min-width: 150px;
 
       &:nth-child(1)>.services__block__item__title {
         background-color: #02e8ba;
@@ -223,10 +183,13 @@ body {
       }
 
       &__icon {
-        font-size: 5em;
+        font-size: 2.5em;
         display: grid;
         align-content: center;
 
+        @include md {
+          font-size: 5em;
+        }
       }
     }
   }
@@ -254,14 +217,16 @@ body {
 
   &__card {
     display: grid;
-    width: 250px;
-    height: 250px;
+    min-width: 200px;
+    min-height: 200px;
     border: solid grey 1px;
     color: $black;
 
     @include md {
       border-color: white;
       color: inherit;
+      max-width: 350px;
+      min-height: 250px;
     }
 
     &:nth-child(2) {
@@ -278,6 +243,7 @@ body {
 
     &__content {
       text-transform: uppercase;
+      padding: 1vh 0;
 
       &__sns {
         padding-top: 2vh;
@@ -296,7 +262,7 @@ body {
 }
 
 .testimonials {
-  height: 40vh;
+  min-height: 40vh;
   padding: 0 5vw 5vh 5vw;
   display: grid;
   justify-content: center;
@@ -328,39 +294,10 @@ body {
     border-radius: 0px;
     color: $white;
   }
-}
 
-.footer {
-  background-color: rgb(46, 43, 43);
-  display: grid;
-  padding: 3vh;
-
-  &__menu__items {
+  &__sns {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  &__address {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1vh;
-  }
-}
-
-#hiddenMenu {
-  display: none;
-
-  @include md {
-    display: initial;
-  }
-}
-
-.header__menu__icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-
-  @include md {
-    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1.5em;
   }
 }
